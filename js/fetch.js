@@ -8,7 +8,7 @@ async function traerUsuarios(){
 
     usuarios.forEach(user => {
       const li = document.createElement("li");
-      li.textContent = `${user.id} - ${user.nombre}`;
+      li.textContent = `"id:"${user.id} - " Nombre:"${user.nombre}`;
       ul.appendChild(li);
     });
 
