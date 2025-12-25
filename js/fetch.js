@@ -12,7 +12,7 @@ async function traerUsuarios(){
        //Crear usuario
        const nombre = document.getElementById("nombre").value;
        const password = document.getElementById("password").value;
-       const response = await fetch("/prueba/crearUsuario",
+       const response = await fetch("https://backend-api-production-04d1.up.railway.app/usuario/crearUsuarios",
            {
                method: "POST",
 
