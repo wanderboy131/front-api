@@ -2,6 +2,15 @@
 async function traerUsuarios(){
     const response = await fetch("https://backend-api-production-04d1.up.railway.app/usuario/traerUsuario")
     const usuarios = await response.json()
+     const ul = document.getElementById("listaUsuarios");
+
+    ul.innerHTML = ""; // limpia la lista
+
+    usuarios.forEach(user => {
+      const li = document.createElement("li");
+      li.textContent = `${user.id} - ${user.nombre}`;
+      ul.appendChild(li);
+    });
 
 }
 
