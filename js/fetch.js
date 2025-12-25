@@ -1,6 +1,6 @@
 //Traer usuarios
 async function traerUsuarios(){
-    const response = await fetch("prueba/traerUsuario")
+    const response = await fetch("https://backend-api-production-04d1.up.railway.app/usuario/traerUsuario")
     const usuarios = await response.json()
 
 }
@@ -40,7 +40,7 @@ async function traerUsuarios(){
        const id = document.getElementById("idUsuario").value;
        const nombre = document.getElementById("nombre").value;
        const password = document.getElementById("password").value;
-       const response = await fetch(`/prueba/editarUsuario/${id}`,{
+       const response = await fetch(`https://backend-api-production-04d1.up.railway.app/usuario/editarUsuario/${id}`,{
            method: "PUT",
            headers: {
                "Content-Type": "application/json"
@@ -64,7 +64,7 @@ async function traerUsuarios(){
 
 async function eliminarUsuario(){
     const id = document.getElementById("idUsuario").value;
-    const response = await fetch(`/prueba/eliminarUsuario/${id}`, {
+    const response = await fetch(`https://backend-api-production-04d1.up.railway.app/usuario/eliminarUsuario/${id}`, {
         method: "DELETE"
     });
     if (response.ok){
